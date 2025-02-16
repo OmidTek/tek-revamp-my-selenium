@@ -11,12 +11,12 @@ import java.time.Duration;
 public class LocateAndAction {
 //mohammad_2024@tekschool.com
     //Password@123
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String [] args) {
         ChromeDriver driver = new ChromeDriver();
         driver.get("https://retail.tekschool-students.com/");
         driver.manage().window().maximize();
         //Implicitly Wait One time setup for Driver and global wait
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 
         //Explicit Wait
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

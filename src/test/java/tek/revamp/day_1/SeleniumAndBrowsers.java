@@ -9,7 +9,7 @@ public class SeleniumAndBrowsers {
 Since Selenium Version 4 and above
 We don't need to set up Browser drivers manually
  */
-    public static void main(String[] args) {
+    public static void main(String [] args) {
 
         ChromeOptions options = new ChromeOptions();
 //        options.addArguments("--headless");
