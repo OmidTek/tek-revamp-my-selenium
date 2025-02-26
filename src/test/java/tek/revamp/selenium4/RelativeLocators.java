@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.locators.RelativeLocator;
 
 import java.time.Duration;
+import java.util.List;
 
 public class RelativeLocators {
     
@@ -43,9 +44,20 @@ public class RelativeLocators {
         WebElement near=driver.findElement(RelativeLocator.with(By.tagName("a")).near(By.linkText("Log in")));
         System.out.println("near of login button: "+near.getText());
 
+        System.out.println("---------------------------");
+        
+        //list of webelement
+        List<WebElement> mainBar=driver.findElements(RelativeLocator.with(By.tagName("a")).above(By.id("small-searchterms")));
+
+        for (WebElement w:mainBar){
+            System.out.println(w.getText());
+        }
+
+        System.out.println("--------------with forEach-------------");
+        mainBar.forEach(s-> System.out.println(s.getText()));
 
 
-        driver.quit();
+       // driver.quit();
 
 
 
